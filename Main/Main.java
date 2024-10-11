@@ -10,6 +10,6 @@ public class Main {
 //		IdeaService idea = new IdeaService();
 		MainFrame main = new MainFrame(); 
 		
-	}
+	} 
 
 }

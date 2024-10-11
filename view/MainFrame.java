@@ -54,6 +54,7 @@ public class MainFrame extends JFrame implements ActionListener {	// 자바에�
 		
 		// 리스너 등록
 		btn.addActionListener(this);		// 버튼이 클릭되는 동작을 알려주는 메소드 사용
+		input.addActionListener(this);
 		this.setVisible(true);	// 화면에 띄워라
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); // X버튼 누르면 프로그램 자동 종료해라
 		

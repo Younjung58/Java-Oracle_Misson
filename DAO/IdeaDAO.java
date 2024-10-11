@@ -18,7 +18,7 @@ public class IdeaDAO {
 	public static IdeaDAO ideadao = null;		// 자기자신의 객체 주소 변수(public static)
 	
 	private IdeaDAO() {
-		init();		// 객체 한번만 만들때 실행하는 메소드 -> 즉 드라이버 로드 한번만 시행 
+		init();		// 객체 한번만 만들때 실행하는 메소드 -> 즉 드라이버 로드 한번만 시행  
 	}
 	
 	public static IdeaDAO getInstance() {
@@ -54,7 +54,7 @@ public class IdeaDAO {
 	public void insert(IdeaDTO ideadto) {
 		if(conn()) {
 			try {
-				String sql = "insert into idea values(user_seq.nextval,?,?,?)"+" order by num desc";
+				String sql = "insert into idea values(user_seq.nextval,?,?,?)";
 				PreparedStatement psmt = conn.prepareStatement(sql);
 				psmt.setString(1, ideadto.getTitle());
 				psmt.setString(2, ideadto.getMemo());
