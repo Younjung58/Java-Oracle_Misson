@@ -1,0 +1,16 @@
+프로젝트명 : wordlove
+
+테이블 생성 -> 
+create table wordlove(
+num number(3) primary key,
+kor varchar2(20),
+eng varchar2(20),
+indate timestamp default sysdate);
+시퀀스명:wordseq
+
+패키지 나누기 ->
+dao - wordDAO(데이터베이스 CRUD작업 역할)
+dto - wordDTO(정보전달 역할)
+main - wordMain(시작화면)
+service - wordService(서비스 동작)
+view - wordView(서비스 화면 구현)
