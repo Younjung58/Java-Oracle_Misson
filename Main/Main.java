@@ -8,7 +8,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("---IDEA 공모전 프로그램---");
 //		IdeaService idea = new IdeaService();
-		MainFrame main = new MainFrame();
+		MainFrame main = new MainFrame(); 
 		
 	}
 

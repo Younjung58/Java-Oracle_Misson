@@ -54,7 +54,7 @@ public class IdeaDAO {
 	public void insert(IdeaDTO ideadto) {
 		if(conn()) {
 			try {
-				String sql = "insert into idea values(user_seq.nextval,?,?,?)";
+				String sql = "insert into idea values(user_seq.nextval,?,?,?)"+" order by num desc";
 				PreparedStatement psmt = conn.prepareStatement(sql);
 				psmt.setString(1, ideadto.getTitle());
 				psmt.setString(2, ideadto.getMemo());

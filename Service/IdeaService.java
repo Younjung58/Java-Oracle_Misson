@@ -57,7 +57,7 @@ public class IdeaService {
 		ideadto.setTitle(title);
 		ideadto.setMemo(memo);
 		ideadto.setName(name);
-		
+		// dao 객체에게 ideadto 객체주소 전달
 		ideadao.insert(ideadto);
 	}
 
@@ -125,8 +125,5 @@ public class IdeaService {
 		for (IdeaDTO ideadto : ideadtolist ) {
 			System.out.println(ideadto.toString());
 		}
-	
 	}
-
-	
 }
