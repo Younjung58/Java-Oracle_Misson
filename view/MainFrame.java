@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -16,10 +18,11 @@ import javax.swing.JTextField;
 import DAO.IdeaDAO;
 import DTO.IdeaDTO;
 
-public class MainFrame extends JFrame implements ActionListener {	// 자바에서 제공하는 GUI 사용가능한 class(JFrame) 상속받기 -> view에 관련된 코드를 분리 시도(is a 관계)
+public class MainFrame extends JFrame implements ActionListener, MouseListener {	// 자바에서 제공하는 GUI 사용가능한 class(JFrame) 상속받기 -> view에 관련된 코드를 분리 시도(is a 관계)
 							// -> JFrame에 화면구현에 관련된 기능이 존재 => JFrame을 상속받아서 이 프로그램의 view를 만들겠다.
 							// implement -> 기능을 구현하기 위해서 사용한다.(ActionListener의 기능을 구현받았다.)(인터페이스구현 - 기능처리 위해서)
 	                        // 이벤트의 기능이 필요하면, implement로 기능을 구현받아서 사용할 수 있고, 그러한 기능으로 어떤 서비스를 정의할 것인가를 결정
+		// MainFrame은 JFrame의 class를 상속받았으며(extend), ActionListener와 MouseListener 2개의 interface을 구현받음(implement)
 	private JLabel title = new JLabel("IdeaBank");
 	private JTextField input = new JTextField();
 	private JButton btn = new JButton("save");
@@ -86,5 +89,35 @@ public class MainFrame extends JFrame implements ActionListener {	// 자바에�
 			dto.setTitle(t);
 			ideaDao.insert(dto);
 		}
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("클릭됨");
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
