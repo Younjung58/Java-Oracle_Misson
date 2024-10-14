@@ -1,13 +1,12 @@
 package word_dao;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.wordDTO;
-import load.oracleload;
+import word_dto.wordDTO;
+import word_load.oracleload;
 
 public class wordDAO extends oracleload {
 	
